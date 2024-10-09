@@ -1,10 +1,152 @@
-.fadeIn_up {
-  opacity: 0;
-  transform: translate(0, 10%);
-  transition: 2s;
+body {
+  background-color: #002538;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #8C6D00;
 }
 
-.fadeIn_up.is-show {
-  transform: translate(0, 0);
-  opacity: 1;
+article {
+  margin: 76px 16px;
+}
+
+.montaga {
+  font-family: "Montaga", serif;
+}
+
+#top-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+  z-index: 2;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+#about {
+  img {
+    margin: 20px auto;
+  }
+}
+
+.works-container {
+  margin: 0 auto;
+  width: 80%;
+
+  .works-item {
+    margin: 40px auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-position: center;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+  }
+}
+
+.my-img {
+  margin: 0 auto;
+  width: 200px;
+}
+
+
+
+#contact {
+  // Based on https://codepen.io/MiXT4PE/pen/ERJVBX
+  .contact-form {
+    margin: 100px auto 0;
+    width: 70%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    width: 100%;
+    margin: 0;
+
+    * {
+      font-size: 20px;
+      letter-spacing: 0.075em;
+      font-weight: 300;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .field {
+      width: 100%;
+      position: relative;
+      margin-bottom: 15px;
+
+      label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(90deg, #b13e8b, #372056);
+        width: 100%;
+        height: 64px;
+        transition: width 333ms ease-in-out;
+        text-align: center;
+        padding: 18px 0;
+      }
+
+      input[type="text"],
+      textarea {
+        border: none;
+        width: 100%;
+        height: 64px;
+        margin: 0;
+        padding-left: 19.5%;
+        color: #313a3d;
+      }
+    }
+
+    #msg {
+      height: 64px;
+      resize: none;
+      transition: all 333ms ease-in-out;
+      padding-top: 18px;
+    }
+
+    textarea:focus#msg,
+    textarea:not(:placeholder-shown)#msg {
+      height: 166px;
+    }
+
+    input[type="text"]:focus+label,
+    input[type="text"]:not(:placeholder-shown)+label,
+    textarea:focus+label,
+    textarea:not(:placeholder-shown)+label,
+    .field:hover label {
+      width: 18%;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(90deg, #b13e8b, #812d65);
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      position: relative;
+      padding: 13px 50px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+      background: #372056;
+    }
+  }
 }
