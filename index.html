@@ -1,4 +1,4 @@
-<!--
+<!-- CONTACT form source code
 Copyright (c) 2024 by Leon Heess (https://codepen.io/MiXT4PE/pen/ERJVBX)
 Fork of an original work Contact Form Template (https://codepen.io/see8ch/pen/AqwqrZ
 
@@ -26,35 +26,45 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <body>
   <header>
-    <img src="img/top-image.jpg" alt="Top" id="top-image">
     <a href="index.html" class="logo montaga">SHIN KAWARADA</a>
   </header>
 
   <main>
     <article id="about">
       <h1 class="montaga">ABOUT</h1>
-      <img class="my-img" src="img/me.jpg" alt="me">
-      <p>高いITスキルを活かし、<br>高品質なサイトをご提供いたします。<br>また、お客様それぞれのニーズに合ったデザインをご提供いたします。</p>
+      <div class="about-container">
+        <img class="my-img" src="img/me.jpg" alt="me">
+        <hr width="12%">
+        <p>高いITスキルを活かし、<br>高品質なサイトをご提供いたします。<br>また、お客様それぞれのニーズに合った<br>デザインをご提供いたします。</p>
+      </div>
     </article>
     <article>
       <h1 class="montaga">WORKS</h1>
       <div class="works-container">
         <div class="works-item">
-          <img src="img/work-socialtech.png" alt="work-socialtech">
+          <a href="#">
+            <img src="img/work-socialtech.png" alt="work-socialtech">
+          </a>
           <p>SocialTech(プログラミングスクール課題)</p>
           <p>HTML/SCSS</p>
         </div>
         <div class="works-item">
-          <img src="img/work-samurai-university.png" alt="work-samurai-university">
+          <a href="https://university.shin-kawarada.com/">
+            <img src="img/work-samurai-university.png" alt="work-samurai-university">
+          </a>
           <p>SAMURAI University(プログラミングスクール課題)</p>
           <p>WordPress/HTML/CSS/PHP</p>
         </div>
         <div class="works-item">
-          <img src="https://placehold.jp/500x340.png" alt="work-socialtech">
+          <a href="#">
+            <img src="https://placehold.jp/500x340.png" alt="work-socialtech">
+          </a>
           <p>作品3</p>
         </div>
         <div class="works-item">
-          <img src="https://placehold.jp/500x340.png" alt="work-socialtech">
+          <a href="#">
+            <img src="https://placehold.jp/500x340.png" alt="work-socialtech">
+          </a>
           <p>作品4</p>
         </div>
       </div>
@@ -64,11 +74,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <div class="contact-form">
         <form action="#" method="post">
           <div class="field">
-            <input type="text" id="name" name="name" placeholder="Who are you?" autofocus/>
+            <input type="text" id="name" name="name" placeholder="Who are you?" />
             <label for="name">Name</label>
           </div>
           <div class="field">
-            <input type="text" id="email" name="email" placeholder="aaa@example.com" />
+            <input type="text" id="email" name="email" placeholder="name@example.com" />
             <label for="email">E-Mail</label>
           </div>
           <div class="field">

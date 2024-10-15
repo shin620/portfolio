@@ -1,7 +1,22 @@
+@use "_config.scss" as config;
+
 body {
   background-color: #002538;
   font-family: "Noto Sans JP", sans-serif;
   color: #8C6D00;
+}
+
+header {
+  background-image: url(../img/top-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 64% 0%;
+  height: 100vh;
+
+  @media screen and (min-width: config.$breakPoint) {
+    background-size: 100% 101%;
+    background-position: center top;
+  }
 }
 
 article {
@@ -10,13 +25,6 @@ article {
 
 .montaga {
   font-family: "Montaga", serif;
-}
-
-#top-image {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  object-position: center;
 }
 
 .logo {
@@ -33,10 +41,53 @@ article {
 }
 
 #about {
-  img {
-    margin: 20px auto;
+  .about-container {
+    position: relative;
+
+    .my-img {
+      margin: 20px auto;
+      width: 200px;
+
+      @media screen and (min-width: config.$breakPoint) {
+        margin-left: config.$image-margin-left-pc;
+        width: config.$image-width-pc;
+      }
+    }
+
+    hr {
+      display: none;
+
+      @media screen and (min-width: config.$breakPoint) {
+        display: block;
+        position: absolute;
+        bottom: 28px;
+        left: calc(config.$image-margin-left-pc + config.$image-width-pc - config.$image-hr-duplicate-pc);
+        border: none;
+        border-top: 2px solid config.$accent-color;
+        width: config.$hr-width-pc;
+      }
+    }
+
+    p {
+      @media screen and (min-width: config.$breakPoint) {
+        display: block;
+        position: absolute;
+        bottom: -28px;
+        left: calc(config.$image-margin-left-pc  + config.$image-width-pc + config.$hr-width-pc - config.$image-hr-duplicate-pc);
+        padding-left: 4px;
+      }
+    }
   }
 }
+
+// .my-img {
+//   margin: 20px auto;
+//   width: 200px;
+
+//   @media screen and (min-width: config.$breakPoint) {
+//     width: 400px;
+//   }
+// }
 
 .works-container {
   margin: 0 auto;
@@ -49,26 +100,40 @@ article {
       width: 100%;
       height: auto;
       object-position: center;
+      border-radius: 8px;
+    }
+
+    img:hover {
+      box-shadow: 4px 4px 3px black;
     }
 
     p {
       margin: 12px 0;
     }
+
+    @media screen and (min-width: config.$breakPoint) {
+      width: 28vw;
+      margin: 40px 5%;
+    }
+  }
+
+  @media screen and (min-width: config.$breakPoint) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
 
-.my-img {
-  margin: 0 auto;
-  width: 200px;
-}
+
 
 
 
 #contact {
+
   // Based on https://codepen.io/MiXT4PE/pen/ERJVBX
   .contact-form {
-    margin: 100px auto 0;
-    width: 70%;
+    margin: 20px auto 0;
+    width: 95%;
     max-width: 1000px;
     display: flex;
     justify-content: center;
@@ -95,12 +160,17 @@ article {
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(90deg, #b13e8b, #372056);
-        width: 100%;
+        background: config.$label-background-color;
+        width: config.$label-width;
         height: 64px;
         transition: width 333ms ease-in-out;
         text-align: center;
         padding: 18px 0;
+        color: white;
+
+        @media all and (min-width: config.$breakPoint) {
+          width: 100%;
+        }
       }
 
       input[type="text"],
@@ -109,44 +179,54 @@ article {
         width: 100%;
         height: 64px;
         margin: 0;
-        padding-left: 19.5%;
-        color: #313a3d;
+        padding-left: calc(config.$label-width-pc + 12px);
+        color: config.$placeholder-color;
+        cursor: text;
       }
     }
 
     #msg {
-      height: 64px;
+      height: 166px;
       resize: none;
       transition: all 333ms ease-in-out;
       padding-top: 18px;
+
+      @media all and (min-width: config.$breakPoint) {
+        height: 64px;
+      }
     }
 
-    textarea:focus#msg,
-    textarea:not(:placeholder-shown)#msg {
-      height: 166px;
-    }
+    @media all and (min-width: config.$breakPoint) {
 
-    input[type="text"]:focus+label,
-    input[type="text"]:not(:placeholder-shown)+label,
-    textarea:focus+label,
-    textarea:not(:placeholder-shown)+label,
-    .field:hover label {
-      width: 18%;
+      textarea:focus#msg,
+      textarea:not(:placeholder-shown)#msg {
+        height: config.$text-height-focus;
+      }
+
+      input[type="text"]:focus+label,
+      input[type="text"]:not(:placeholder-shown)+label,
+      textarea:focus+label,
+      textarea:not(:placeholder-shown)+label,
+      .field:hover label {
+        width: config.$label-width-pc;
+      }
     }
 
     input[type="submit"] {
-      background: linear-gradient(90deg, #b13e8b, #812d65);
+      background: config.$accent-color;
       -webkit-appearance: none;
       appearance: none;
       border: none;
       position: relative;
       padding: 13px 50px;
+      display: block;
+      margin: 0 auto;
       transition: all 0.3s ease-in-out;
     }
 
     input[type="submit"]:hover,
     input[type="submit"]:focus {
-      background: #372056;
+      background: config.$send-hover;
     }
   }
 }

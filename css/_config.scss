@@ -1,2 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montaga&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montaga&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$base-color: #002538;
+$accent-color: #8C6D00;
+
+$breakPoint: 768px;
+
+// ABOUT
+$image-margin-left-pc: 24%;
+$image-width-pc: 30%;
+$hr-width-pc: 8%;
+$image-hr-duplicate-pc: 4%;
+
+// CONTACT
+$label-width: 24%;
+$label-width-pc: 12%;
+$label-background-color: #313A3D;
+$placeholder-color: #313A3D;
+$send-hover: #E44D93;
+$text-height-focus: 312px;
