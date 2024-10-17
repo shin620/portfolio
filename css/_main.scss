@@ -186,9 +186,13 @@ article {
         width: 100%;
         height: 64px;
         margin: 0;
-        padding-left: calc(config.$label-width-pc + 12px);
+        padding-left: calc(config.$label-width + 12px);
         color: config.$placeholder-color;
         cursor: text;
+
+        @media screen and (min-width: config.$breakPoint) {
+          padding-left: calc(config.$label-width-pc + 12px);
+        }
       }
     }
 
