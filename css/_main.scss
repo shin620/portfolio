@@ -1,5 +1,17 @@
 @use "_config.scss" as config;
 
+.js-fadeup {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s, transform .8s;
+}
+
+.js-fadeup.is-inview {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .5s;
+}
+
 body {
   background-color: #002538;
   font-family: "Noto Sans JP", sans-serif;
@@ -21,6 +33,14 @@ header {
 
 article {
   margin: 76px 16px;
+
+  @media screen and (min-width: config.$breakPoint) {
+    margin: 76px 36px;
+
+    h1 {
+      font-size: 36px;
+    }
+  }
 }
 
 .montaga {
@@ -80,15 +100,6 @@ article {
   }
 }
 
-// .my-img {
-//   margin: 20px auto;
-//   width: 200px;
-
-//   @media screen and (min-width: config.$breakPoint) {
-//     width: 400px;
-//   }
-// }
-
 .works-container {
   margin: 0 auto;
   width: 80%;
@@ -123,10 +134,6 @@ article {
     justify-content: space-between;
   }
 }
-
-
-
-
 
 #contact {
 

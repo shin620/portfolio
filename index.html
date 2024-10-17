@@ -22,6 +22,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
 
   <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery.inview.min.js"></script>
+  <script src="js/inview.js"></script>
 </head>
 
 <body>
@@ -30,7 +34,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   </header>
 
   <main>
-    <article id="about">
+    <article id="about" class="js-fadeup">
       <h1 class="montaga">ABOUT</h1>
       <div class="about-container">
         <img class="my-img" src="img/me.jpg" alt="me">
@@ -38,7 +42,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <p>高いITスキルを活かし、<br>高品質なサイトをご提供いたします。<br>また、お客様それぞれのニーズに合った<br>デザインをご提供いたします。</p>
       </div>
     </article>
-    <article>
+    <article class="js-fadeup">
       <h1 class="montaga">WORKS</h1>
       <div class="works-container">
         <div class="works-item">
@@ -56,20 +60,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           <p>WordPress/HTML/CSS/PHP</p>
         </div>
         <div class="works-item">
-          <a href="#">
-            <img src="https://placehold.jp/500x340.png" alt="work-socialtech">
+          <a href="https://hair-tech.shin-kawarada.com/">
+            <img src="img/work-hair-tech.png" alt="work-hair-tech">
           </a>
-          <p>作品3</p>
+          <p>Hair Tech(プログラミングスクール課題)</p>
+          <p>WordPress</p>
         </div>
         <div class="works-item">
           <a href="#">
-            <img src="https://placehold.jp/500x340.png" alt="work-socialtech">
+            <img src="https://placehold.jp/500x340.png" alt="work">
           </a>
           <p>作品4</p>
         </div>
       </div>
     </article>
-    <article id="contact">
+    <article id="contact" class="js-fadeup">
       <h1 class="montaga">CONTACT</h1>
       <div class="contact-form">
         <form action="#" method="post">
