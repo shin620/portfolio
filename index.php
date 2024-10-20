@@ -21,11 +21,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   <!-- reset.css modern-css-reset -->
   <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css">
 
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href="<?php echo get_template_directory_uri(); ?>/css/style.css" rel="stylesheet">
+
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="js/jquery.inview.min.js"></script>
-  <script src="js/inview.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.inview.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/inview.js"></script>
 </head>
 
 <body>
@@ -37,7 +39,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <article id="about" class="js-fadeup">
       <h1 class="montaga">ABOUT</h1>
       <div class="about-container">
-        <img class="my-img" src="img/me.jpg" alt="me">
+        <img class="my-img" src="<?php echo get_template_directory_uri(); ?>/img/me.jpg" alt="me">
         <hr width="12%">
         <p>高いITスキルを活かし、<br>高品質なサイトをご提供いたします。<br>また、お客様それぞれのニーズに合った<br>デザインをご提供いたします。</p>
       </div>
@@ -47,21 +49,21 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <div class="works-container">
         <div class="works-item">
           <a href="#">
-            <img src="img/work-socialtech.png" alt="work-socialtech">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/work-socialtech.png" alt="work-socialtech">
           </a>
           <p>SocialTech(プログラミングスクール課題)</p>
           <p>HTML/SCSS</p>
         </div>
         <div class="works-item">
           <a href="https://university.shin-kawarada.com/">
-            <img src="img/work-samurai-university.png" alt="work-samurai-university">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/work-samurai-university.png" alt="work-samurai-university">
           </a>
           <p>SAMURAI University(プログラミングスクール課題)</p>
           <p>WordPress/HTML/CSS/PHP</p>
         </div>
         <div class="works-item">
           <a href="https://hair-tech.shin-kawarada.com/">
-            <img src="img/work-hair-tech.png" alt="work-hair-tech">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/work-hair-tech.png" alt="work-hair-tech">
           </a>
           <p>Hair Tech(プログラミングスクール課題)</p>
           <p>WordPress</p>
@@ -77,21 +79,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     <article id="contact" class="js-fadeup">
       <h1 class="montaga">CONTACT</h1>
       <div class="contact-form">
-        <form action="#" method="post">
-          <div class="field">
-            <input type="text" id="name" name="name" placeholder="Who are you?" />
-            <label for="name">Name</label>
-          </div>
-          <div class="field">
-            <input type="text" id="email" name="email" placeholder="name@example.com" />
-            <label for="email">E-Mail</label>
-          </div>
-          <div class="field">
-            <textarea id="msg" rows="4" name="msg" placeholder="Please type your message here."></textarea>
-            <label for="msg">Msg</label>
-          </div>
-          <input class="button" type="submit" value="Send" />
-        </form>
+        <?php echo do_shortcode( '[contact-form-7 id="ac3473a" title="コンタクトフォーム 1"]' ); ?>
       </div>
     </article>
   </main>
