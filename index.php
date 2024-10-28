@@ -48,7 +48,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
       <h1 class="montaga">WORKS</h1>
       <div class="works-container">
         <div class="works-item">
-          <a href="#">
+          <a href="https://shin620.github.io/socialtech">
             <img src="<?php echo get_template_directory_uri(); ?>/img/work-socialtech.png" alt="work-socialtech">
           </a>
           <p>SocialTech(プログラミングスクール課題)</p>
@@ -67,12 +67,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           </a>
           <p>Hair Tech(プログラミングスクール課題)</p>
           <p>WordPress</p>
-        </div>
-        <div class="works-item">
-          <a href="#">
-            <img src="https://placehold.jp/500x340.png" alt="work">
-          </a>
-          <p>作品4</p>
         </div>
       </div>
     </article>
